@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 頁面內容樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* 登入模態框樣式 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>跳出式登入</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <!-- 頁面內容 -->
+        <div class="content">
+            <h1>歡迎光臨！</h1>
+            <p>這是您的內容。</p>
+            <button onclick="showLoginModal()">登入</button>
+        </div>
+
+        <!-- 登入模態框 -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeLoginModal()">&times;</span>
+                <h2>登入</h2>
+                <!-- 登入表單 -->
+                <form action="login.php" method="post">
+                    <!-- 登入表單元素 -->
+                    <label for="username">用戶名稱:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">密碼:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">登入</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+            function showLoginModal() {
+                document.getElementById('loginModal').style.display = 'block';
+            }
+
+            function closeLoginModal() {
+                document.getElementById('loginModal').style.display = 'none';
+            }
+
+        </script>
+    </body>
+
+    </html>
+
+</body>
+
+</html>

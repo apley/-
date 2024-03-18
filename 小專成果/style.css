@@ -1,0 +1,306 @@
+/* 通用樣式 */
+* {
+    box-sizing: border-box;
+}
+
+/* 重置body元素的margin，以確保整個頁面不添加額外的空白邊距 */
+body {
+    margin: 0;
+}
+
+/* 標題區塊的樣式 */
+header {
+    background-color: rgb(229, 155, 19);
+    text-align: center;
+}
+
+/* 主要容器的樣式 */
+.container {
+
+    width: 90%;
+    /* 設定容器寬度 */
+    max-width: 1170px;
+    /* 設定最大寬度 */
+    margin: auto;
+    /* 左右居中 */
+}
+
+/* 清除容器內浮動元素的方法 */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 頁尾區塊的樣式 */
+footer {
+    padding: 30px;
+    /* 底部 footer 的內邊距 */
+    background-color: rgb(229, 155, 19);
+    /* 背景色 */
+}
+
+/* 產品區塊的樣式 */
+.product {
+    width: 33.3333%;
+    /* 設置每個產品區塊的寬度為容器寬度的三分之一 */
+    padding: 20px;
+    /* 添加內邊距以增加產品區塊的內間距 */
+}
+
+/* 左浮動元素的樣式 */
+.float-left {
+    float: left;
+}
+
+/* 將h2元素文字居中對齊 */
+h2 {
+    text-align: center;
+}
+
+/* 不同輸入類型的樣式，例如文本框、選擇框、文本區域以及密碼和電子郵件輸入框 */
+input[type="text"],
+select,
+textarea,
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+/* 標籤的樣式，增加底部邊距以提高標籤之間的可讀性 */
+label {
+    margin-bottom: 20px;
+}
+
+/* 提交按鈕的樣式 */
+input[type="submit"] {
+    border: none;
+    background-color: orange;
+    padding: 2px;
+    width: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    float: right;
+    /* 右浮動以使其靠近右邊界 */
+    cursor: pointer;
+    font-size: small;
+}
+
+.pagetop {
+    position: fixed;
+    /*固定定位*/
+    right: 10px;
+    /*固定定位位置*/
+    bottom: 10px;
+    /*固定定位位置*/
+    display: block;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+}
+
+.pagetop:hover {
+    background-color: yellow;
+}
+
+/* 提交按鈕的懸停效果，當鼠標懸停在上面時變為橘色 */
+input[type="submit"]:hover {
+    background-color: rgb(255, 145, 0);
+}
+
+.bg-gray {
+    background-color: lightgray;
+}
+
+/* 後代 相鄰 偽類 麵包屑樣式 */
+.breadcrumb ol li+li::before {
+    content: "\00a0 / \00a0";
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+/* 嵌入網站 */
+iframe {
+    padding: auto;
+    margin: 0%;
+}
+
+/* title樣式 */
+h1 {
+    width: 20%;
+}
+
+h1>a {
+    text-decoration: none;
+    color: black;
+    font-size: 31.5px;
+}
+
+nav {
+    width: 60%;
+}
+
+nav>ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+nav>ul>li {
+    float: left;
+    width: 25%;
+}
+
+nav>ul>li>a {
+    display: block;
+    line-height: 100px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    float: right;
+}
+
+.breadcrumb ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.breadcrumb ol li {
+    float: left;
+}
+
+/* 媒體圖標樣式設定 */
+.social-icon {
+    margin-bottom: 20px;
+    width: 20%;
+    float: left;
+
+}
+
+.social-icon a {
+    font-size: 32px;
+    margin-right: 10px;
+    float: left;
+}
+
+.icon-facebook {
+    color: #4267B2;
+}
+
+.icon-instagram {
+    color: #E1306C;
+}
+
+.icon-youtube {
+    color: #FF0000;
+}
+
+.icon-line {
+    color: #06c755;
+}
+
+.font-size40 {
+    font-size: 40px;
+}
+
+/* 通用樣式結束 */
+/* 表單樣式 */
+form::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+/* 首頁專用背景樣式 */
+/* .bg-img {
+    height: 500px;
+    /* url是路徑 */
+    background-image: url(../img/bg-10.jpeg);
+    /* 這背景可以變成固定 */
+    background-attachment: fixed;
+    line-height: 500px;
+    text-align: center;
+    color: azure;
+    font-size: 30px;
+    letter-spacing: 5px;} */
+
+/* 表格專用 */
+.list {
+    width: 100%;
+    /* 設定表格寬度為100% */
+    margin-bottom: 40px;
+    /* 添加下邊距，增加與下方元素的間距 */
+}
+
+/* 群組選擇器: 對表格、表頭、表格行和儲存格應用相同的樣式 */
+.list,
+tr,
+td,
+th {
+    /* border: 1px solid black; 設定表格元素的邊框 */
+    border-bottom: 1px solid gray;
+    border-collapse: collapse;
+    /* 折疊邊框，使其更緊密 */
+}
+
+/* 使用:nth-child奇偶選擇器為奇數行添加粉紅色背景 */
+tr:nth-child(odd) {
+    /* background-color: lightsalmon; */
+}
+
+/* 設定表頭和儲存格的內邊距 */
+th,
+td {
+    padding: 10px;
+}
+
+/* 設定表頭背景顏色為橙色 */
+th {
+    /* background-color: orange; */
+}
+
+/* 滑鼠懸停在儲存格上時變更背景顏色為淺藍色 */
+td:hover {
+    background-color: lightgray;
+}
+
+a:hover {
+    color: rgba(255, 140, 0, 0.859);
+}
+
+.pointer {
+    cursor: pointer;
+    margin: 40px;
+}
+
+.pointer:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.margin50 {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.text:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1%;
+}

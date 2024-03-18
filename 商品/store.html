@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>玥珍軒｜商品</title>
+    <meta name="description" content="This is the description">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Rampart+One&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="store.css" />
+    <script src="store.js" async></script>
+</head>
+
+<body>
+    <header style="display: flex;"><!-- 畫布外菜單 -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <button class="accordion">熱門精選</button>
+            <div class="panel">
+                <a href="#popular" class="mytext">人氣商品</a>
+                <a href="#create" class="mytext">文創商品</a>
+            </div>
+            <button class="accordion">禮盒專區</button>
+            <div class="panel">
+                <a href="#prasent" class="mytext">精選禮盒</a>
+                <a href="#zhonghe" class="mytext">綜合禮盒</a>
+                <a href="#zhongqiu" class="mytext">中秋禮盒</a>
+                <a href="#chunjie" class="mytext">春節禮盒</a>
+            </div>
+            <button class="accordion">各式資料｜米荖</button>
+            <div class="panel">
+                <a href="#gaubing" class="mytext">糕餅系列</a>
+                <a href="" class="mytext">酥餅系列</a>
+                <a href="" class="mytext">鳳梨酥系列</a>
+                <a href="" class="mytext">荖類</a>
+                <a href="" class="mytext">古早味點心</a>
+            </div>
+            <button class="accordion">漢餅系列</button>
+            <div class="panel">
+                <a href="" class="mytext">傳統大餅</a>
+                <a href="" class="mytext">漢點</a>
+                <a href="" class="mytext">廣式月餅</a>
+            </div>
+
+
+        </div>
+
+        <!-- 下拉圖示-->
+        <span onclick="openNav()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </span>
+
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <div id="main">
+        </div>
+        <!-- 畫布外菜單end -->
+        <div class="wrap">
+            <div class="logo"><img src="../img/玥珍軒.png" alt=""></div>
+            <ul>
+                <li><a href="../主頁/index.html">首頁</a></li>
+                <li><a href="#">產品列表</a></li>
+                <li><a href="../聯絡資訊/contact.html">聯絡我們</a></li>
+            </ul>
+        </div>
+        <div class="social-icon">
+            <a href="#" class="icon-facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="icon-instergram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="icon-line"><i class="fa-brands fa-line"></i></a>
+        </div>
+        <!-- 購物車外菜單 -->
+        <div id="sale" class="sidenav-right">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeb()">&times;</a>
+
+            <!-- 購物車總站 -->
+            <div class="right-cm">
+                <section class="content-section">
+                    <h2>購物車</h2>
+                    <div id="">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">商品</span>
+                            <span class="cart-price cart-header cart-column">價格</span>
+                            <span class="cart-quantity cart-header cart-column">數量</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">總價</strong>
+                            <span class="cart-total-price">NT$0</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-purchase" type="button">確定購買</button>
+                </section>
+            </div>
+            <!-- 購物車總站結束 -->
+
+
+        </div>
+
+        <!-- 購物車圖示-->
+        <span onclick="openb()">
+            <img src="../img/購物車圖示.png" alt="購物車圖示">
+        </span>
+        <div id="sale-main">
+        </div>
+        <!-- 購物車外菜單結束 -->
+    </header>
+    <div class="container">
+        <br id="popular"><br><br>
+        <section class="content-section">
+            <h2 class="section-header">產品列表</h2>
+            <br ><br><br id="popular">
+            <h3 style="text-align: center;" >人氣商品</h3>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">夏威夷果糖</span>
+                    <img class="shop-item-image" src="../img/夏威夷果糖.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$290</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">南棗核桃糕</span>
+                    <img class="shop-item-image" src="../img/南棗核桃糕.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$290</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">花生粉老</span>
+                    <img class="shop-item-image" src="../img/花生粉老.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$999</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">花生粉條老</span>
+                    <img class="shop-item-image" src="../img/花生粉條老.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$290</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">芝麻條老</span>
+                    <img class="shop-item-image" src="../img/花生粉條老.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$280</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">紫心地瓜老</span>
+                    <img class="shop-item-image" src="../img/紫心地瓜老.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$290</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">白芝麻老</span>
+                    <img class="shop-item-image" src="../img/白芝麻老.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$290</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">杏仁球老</span>
+                    <img class="shop-item-image" src="../img/杏仁球老.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$290</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">杏仁棗</span>
+                    <img class="shop-item-image" src="../img/杏仁棗.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$290</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">杏仁條老</span>
+                    <img class="shop-item-image" src="../img/杏仁條老.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$290</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <br id="create"><br><br>
+            <h3>文創商品</h3>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">【成品】手縫粽子香包</span>
+                    <img class="shop-item-image" src="../img/【成品】手縫粽子香包.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$280</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【材料包】手縫粽子香包</span>
+                    <img class="shop-item-image" src="../img/【材料包】手縫粽子香包.jpeg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$120</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section">
+            <h2 class="section-header" id="禮盒">禮盒專區</h2>
+            <br id="prasent"><br><br>
+            <h3>精選禮盒</h3>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】文房四寶B</span>
+                    <img class="shop-item-image" src="../img/2024過年-文房四寶禮盒B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$1090</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】文房四寶A</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$1050</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】金虎禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-金虎吉祥B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】金虎禮盒A</span>
+                    <img class="shop-item-image" src="../img/2024過年-金虎吉祥A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$730</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒A</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$710</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <br id="zhonghe"><br><br>
+            <h3>綜合禮盒</h3>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】文房四寶B</span>
+                    <img class="shop-item-image" src="../img/2024過年-文房四寶禮盒B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$1090</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】文房四寶A</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$1050</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】金虎禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-金虎吉祥B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】金虎禮盒A</span>
+                    <img class="shop-item-image" src="../img/2024過年-金虎吉祥A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$730</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒A</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$710</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <br id="zhongqiu"><br><br>
+            <h3>中秋禮盒</h3>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】文房四寶B</span>
+                    <img class="shop-item-image" src="../img/2024過年-文房四寶禮盒B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$1090</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】文房四寶A</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$1050</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】金虎禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-金虎吉祥B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】金虎禮盒A</span>
+                    <img class="shop-item-image" src="../img/2024過年-金虎吉祥A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$730</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒A</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$710</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <br id="chunjie"><br><br>
+            <h3>春節禮盒</h3>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】文房四寶B</span>
+                    <img class="shop-item-image" src="../img/2024過年-文房四寶禮盒B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$1090</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】文房四寶A</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$1050</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】金虎禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-金虎吉祥B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】金虎禮盒A</span>
+                    <img class="shop-item-image" src="../img/2024過年-金虎吉祥A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$730</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒A</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意A（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$710</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <footer>
+        <div class="container">
+            <p>copyright &copy;版權所有 All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>

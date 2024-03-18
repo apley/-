@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玥珍軒｜首頁</title>
+    <link rel="stylesheet" href="../商品/store.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Ma+Shan+Zheng&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+JP&family=Rampart+One&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-color: rgb(240, 240, 240);
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header style="display: flex;"><!-- 畫布外菜單 -->
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="" class="accordion">優惠專區</a>
+
+            <button class="accordion">熱門精選</button>
+            <div class="panel">
+                <a href="#popular" class="mytext">人氣商品</a>
+                <a href="#create" class="mytext">文創商品</a>
+            </div>
+            <button class="accordion">禮盒專區</button>
+            <div class="panel">
+                <a href="#prasent" class="mytext">精選禮盒</a>
+                <a href="" class="mytext">綜合禮盒</a>
+                <a href="" class="mytext">中秋禮盒</a>
+                <a href="" class="mytext">春節禮盒</a>
+            </div>
+            <button class="accordion">各式資料｜米荖</button>
+            <div class="panel">
+                <a href="" class="mytext">糕餅系列</a>
+                <a href="" class="mytext">酥餅系列</a>
+                <a href="" class="mytext">鳳梨酥系列</a>
+                <a href="" class="mytext">荖類</a>
+                <a href="" class="mytext">古早味點心</a>
+            </div>
+            <button class="accordion">漢餅系列</button>
+            <div class="panel">
+                <a href="" class="mytext">傳統大餅</a>
+                <a href="" class="mytext">漢點</a>
+                <a href="" class="mytext">廣式月餅</a>
+            </div>
+
+
+        </div>
+
+        <!-- 下拉圖示-->
+        <span onclick="openNav()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </span>
+
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <div id="main">
+        </div>
+        <!-- 畫布外菜單end -->
+        <div class="wrap">
+            <div class="logo"><img src="../img/玥珍軒.png" alt=""></div>
+            <ul>
+                <li><a href="../主頁/index.html">首頁</a></li>
+                <li><a href="../商品/store.html">產品列表</a></li>
+                <li><a href="../聯絡資訊/contact.html">聯絡我們</a></li>
+            </ul>
+        </div>
+        <div class="social-icon">
+            <a href="#" class="icon-facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="icon-instergram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="icon-line"><i class="fa-brands fa-line"></i></a>
+        </div>
+        <!-- 購物車外菜單 -->
+        <div id="sale" class="sidenav-right">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeb()">&times;</a>
+
+            <!-- 購物車總站 -->
+            <div class="right-cm">
+                <section class="content-section">
+                    <h2>購物車</h2>
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">商品</span>
+                        <span class="cart-price cart-header cart-column">價格</span>
+                        <span class="cart-quantity cart-header cart-column">數量</span>
+                    </div>
+                    <div class="cart-items" id="result">
+                    </div>
+                    <div class="cart-total">
+                        <strong class="cart-total-title">總價</strong>
+                        <span class="cart-total-price">NT$0</span>
+                    </div>
+                    <button class="btn btn-primary btn-purchase" type="button">確定購買</button>
+                </section>
+            </div>
+            <!-- 購物車總站結束 -->
+
+
+        </div>
+
+        <!-- 購物車圖示-->
+        <span onclick="openb()">
+            <img src="../img/購物車圖示.png" alt="購物車圖示">
+        </span>
+        <div id="sale-main">
+        </div>
+        <!-- 購物車外菜單結束 -->
+    </header>
+    <!-- 輪播圖開始 -->
+    <!-- Slideshow container -->
+    <br><br><br>
+    <div class="slideshow-container" style='position: relative;'>
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="../img/輪播圖1.png" style="width:100%">
+            <!-- <div class="text">Caption Text</div> -->
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="../img/輪播圖2.jpeg" style="width:100%">
+            <!-- <div class="text">Caption Two</div> -->
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="../img/輪播圖3.jpeg" style="width:100%;">
+            <!-- <div class="text">Caption Two</div> -->
+        </div>
+        <img src="../img/玉珍齋首頁.svg" alt="" style="position: absolute ;bottom: -10px;">
+
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center;background-color: rgb(240, 240, 240);">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!-- 輪播圖結束 -->
+
+
+    <!-- 預留新聞區塊 -->
+    <div class="container rall">
+        <table class="list">
+            <th colspan="3">
+                <p class="float-left">最新消息</p>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+                <tr>
+                    <td>2024/02/15</td>
+
+                </tr>
+            </th>
+        </table>
+
+    </div>
+
+
+    <!-- 產品區塊 -->
+    <h2 class="container" style="font-size: 40px; border-bottom: 1px solid black;padding: 50px;">產品介紹</h2>
+    <div class="container b2-img ">
+        <div style="float: left;display: flexbox;">
+            <img src="https://placehold.co/600x400 " class="pointer" alt="" width="400px">
+            <p class="margin50">
+                圓形糕｜綠豆/芝麻/杏仁/梅香/牛奶/抹茶延續百<br>年的傳統糕點綿密口感、入口即化，為茗茶最合宜<br>之甜點，受到各年齡層的喜愛與推薦。口味多樣，<br>歡迎選購。
+            </p>
+        </div>
+        <div style="float: left;display: flexbox;">
+            <img src="https://placehold.co/600x400 " class="pointer" alt="" width="400px">
+            <p class="margin50" >鳳眼糕｜原味/杏仁/梅香/黑糖
+                昔日鹿港文人雅士<br>聚會時以詩詞與糕點佐茶，創辦人黃錦先生準備各<br>式糕點招待書齋的賓客，鳳眼糕便是其中之一。精<br>緻細長的外型宛如鳳眼，口感沁涼清甜、入口即化<br>，獲得眾人喜愛。
+            </p>
+        </div>
+        <div style="float: left;display: flexbox;">
+            <img src="https://placehold.co/600x400 " class="pointer" alt="" width="400px">
+            <p class="margin50">綜合鳳梨酥禮盒
+                適合拜訪親友、過節團聚時享用<br>，為伴手禮首選。送禮自食兩相宜，歡迎選購。 <br>鳳梨酥內餡的甜香味來自於古早工法，讓鳳梨甜味<br>溫和。外皮酥脆則是來自於傳統麵餅打工功夫。
+                玉<br>珍齋堅持數十年，只為給您最傳統的美味鳳梨酥。</p>
+        </div>
+        <div style="float: left;display: flexbox;">
+            <img src="https://placehold.co/600x400 " class="pointer" alt="" width="400px">
+            <p class="margin50">
+                圓形糕｜綠豆/芝麻/杏仁/梅香/牛奶/抹茶延續百<br>年的傳統糕點綿密口感、入口即化，為茗茶最合宜<br>之甜點，受到各年齡層的喜愛與推薦。口味多樣，<br>歡迎選購。
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <a href="#" class="pagetop">top</a>
+    <div class="bg-img"></div>
+
+    <!-- 頁尾區塊 -->
+    <footer>
+        <div class="container">
+            <p>copyright &copy;版權所有 All rights reserved</p>
+        </div>
+    </footer>
+    <script src="./js.js"> </script>
+    <script src="../商品/store.js"></script>
+
+</body>
+
+</html>

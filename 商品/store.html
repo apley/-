@@ -81,19 +81,19 @@
             <div class="right-cm">
                 <section class="content-section">
                     <h2>購物車</h2>
-                    <div id="">
-                        <div class="cart-row">
-                            <span class="cart-item cart-header cart-column">商品</span>
-                            <span class="cart-price cart-header cart-column">價格</span>
-                            <span class="cart-quantity cart-header cart-column">數量</span>
-                        </div>
-                        <div class="cart-items">
-                        </div>
-                        <div class="cart-total">
-                            <strong class="cart-total-title">總價</strong>
-                            <span class="cart-total-price">NT$0</span>
-                        </div>
+
+                    <div class="cart-row">
+                        <span class="cart-item cart-header cart-column">商品</span>
+                        <span class="cart-price cart-header cart-column">價格</span>
+                        <span class="cart-quantity cart-header cart-column">數量</span>
                     </div>
+                    <div class="cart-items" id="mySnippet">
+                    </div>
+                    <div class="cart-total" id="mycalculate">
+                        <strong class="cart-total-title">總價</strong>
+                        <span class="cart-total-price">NT$0</span>
+                    </div>
+
                     <button class="btn btn-primary btn-purchase" type="button">確定購買</button>
                 </section>
             </div>
@@ -114,8 +114,8 @@
         <br id="popular"><br><br>
         <section class="content-section">
             <h2 class="section-header">產品列表</h2>
-            <br ><br><br id="popular">
-            <h3 style="text-align: center;" >人氣商品</h3>
+            <br><br><br id="popular">
+            <h3 style="text-align: center;">人氣商品</h3>
             <div class="shop-items">
                 <div class="shop-item">
                     <span class="shop-item-title">夏威夷果糖</span>
@@ -441,6 +441,16 @@
             <p>copyright &copy;版權所有 All rights reserved</p>
         </div>
     </footer>
+    <script>
+        var intervalId = setInterval(function () {
+            const myHtmlSnippet = document.getElementById('mySnippet').innerHTML;
+            localStorage.setItem('myHtml', myHtmlSnippet)
+        }, 100);
+        var intervalId = setInterval(function () {
+            const myHtmlSnippet = document.getElementById('mycalculate').innerHTML;
+            localStorage.setItem('mycalculate', myHtmlSnippet)
+        }, 100);
+    </script>
 </body>
 
 </html>

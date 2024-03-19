@@ -241,6 +241,9 @@ html, body {
     flex-wrap: wrap;
     /* justify-content: space-around; */
 }
+.shop-item img{
+    width: 300px;
+}
 
 .cart-header {
     font-weight: bold;
@@ -606,9 +609,6 @@ li a {
 
 }
 
-.b2-img {
-    margin-left: 15%;
-}
 
 /* 清除容器內浮動元素的方法 */
 .container::after {

@@ -58,14 +58,7 @@ function addToCartClicked(event) {
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
     addItemToCart(title, price, imageSrc)
     updateCartTotal();
-    updateInformation([title, price,imageSrc]);
 }
-// function updateInformation(e){
-//     for(var i=0;i<=    ;)
-//     localStorage.setItem('p',e);
-//     var s=localStorage.getItem('pikachu');
-//     console.log(s.split(','));
-// }
 
 
 function addItemToCart(title, price, imageSrc) {

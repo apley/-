@@ -136,12 +136,15 @@
                         <span class="cart-price cart-header cart-column">價格</span>
                         <span class="cart-quantity cart-header cart-column">數量</span>
                     </div>
-                    <div class="cart-items">
+                    <div class="cart-items" id="targetElement">
                     </div>
-                    <div class="cart-total">
+                    <div class="cart-total" id="mycalculate">
+
+                    </div>
+                    <!-- <div class="cart-total">
                         <strong class="cart-total-title">總價</strong>
                         <span class="cart-total-price">NT$0</span>
-                    </div>
+                    </div> -->
                     <button class="btn btn-primary btn-purchase" type="button">確定購買</button>
                 </section>
             </div>
@@ -247,6 +250,11 @@
         formInput.addEventListener('click', function () {
             alert('感謝您的建議！');
         });
+
+        const retrievedHtml = localStorage.getItem('myHtml');
+        document.getElementById('targetElement').innerHTML = retrievedHtml;
+        const Html = localStorage.getItem('mycalculate');
+        document.getElementById('mycalculate').innerHTML = Html;
 
     </script>
 </body>

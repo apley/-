@@ -15,21 +15,19 @@ function ready() {
     for (var i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
-
     }
 
     var addToCartButtons = document.getElementsByClassName('shop-item-button')
     for (var i = 0; i < addToCartButtons.length; i++) {
         var button = addToCartButtons[i]
-        button.addEventListener('click', addToCartClicked);
+        button.addEventListener('click', addToCartClicked)
     }
 
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
-
 function purchaseClicked() {
-    alert('感謝您的支持！')
+    alert('感謝你的購買')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
@@ -42,48 +40,33 @@ function removeCartItem(event) {
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
 }
-function updatequantity(){
-        document.getElementsByClassName('cart-quantity-input').value=input.innerHTML
-        console.log(input);
-    }
+
 function quantityChanged(event) {
-    console.clear()
-    console.log('quantityChanged開始')
-    const input = event.target
+    var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
-    }else{
-        input.innerHTML=input.value
-        console.log(input)
     }
-      
     updateCartTotal()
-    console.log('quantitychanger結束')
 }
-    
+
 function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-    //這裡是加入購物車  不應該拿來改數量 應該在quantitychanged更改
-    // var quantity=shopItem.getElementsByClassName('cart-quantity-input')[0].innerText
     addItemToCart(title, price, imageSrc)
-    updateCartTotal();
+    updateCartTotal()
 }
 
-
 function addItemToCart(title, price, imageSrc) {
-
-    // console.log();
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
-            alert('這樣商品已經加入購物車！')
+            alert('已加入購物車嘍！')
             return
         }
     }
@@ -94,7 +77,7 @@ function addItemToCart(title, price, imageSrc) {
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value='1'>
+            <input class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger" type="button">刪除</button>
         </div>`
     cartRow.innerHTML = cartRowContents
@@ -102,7 +85,6 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
 }
-
 
 function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
@@ -116,7 +98,7 @@ function updateCartTotal() {
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
-
+    total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = 'NT$' + total
 }
 //購物車結束
@@ -202,6 +184,23 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
-
-
 // 輪播圖結束
+// // localStorage購物車
+//  //接收localStorage的品項
+//  const retrievedHtml = localStorage.getItem('myHtml');
+//  document.getElementById('mySnippet').innerHTML = retrievedHtml;
+//  //接收localStorage的計算結果
+//  const Html = localStorage.getItem('mycalculate');
+//  document.getElementById('mycalculate').innerHTML = Html;
+//  // 送出品項至localStorage
+//  function apple() {
+//      const myHtmlSnippet = document.getElementById('mySnippet').innerHTML;
+//      localStorage.setItem('myHtml', myHtmlSnippet)
+//  }; 
+//  console.log(document.getElementById('mySnippet').innerHTML);
+//  //送出計算結果至localStorage
+//  function banana() {
+//      const myHtmlSnippet = document.getElementById('mycalculate').innerHTML;
+//      localStorage.setItem('mycalculate', myHtmlSnippet)
+//  }
+//  //localStorage 購物車結束

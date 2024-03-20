@@ -77,8 +77,8 @@
         <div id="sale" class="sidenav-right">
             <a href="javascript:void(0)" class="closebtn" on onclick="closeb()">&times;</a>
             <!-- 購物車總站 -->
-            <div class="right-cm">
-                <section class="content-section">
+            <div class="right-cm" onclick="banana()">
+                <section class="content-section" oninput="apple()" onclick="apple()">
                     <h2>購物車</h2>
 
                     <div class="cart-row">
@@ -86,10 +86,14 @@
                         <span class="cart-price cart-header cart-column">價格</span>
                         <span class="cart-quantity cart-header cart-column">數量</span>
                     </div>
-                    <div class="cart-items" id="mySnippet" oninput="apple()" onclick="apple()">
+                    <div class="cart-items" id="mySnippet" onchange="banana()" onclick="banana()">
 
                     </div>
-                    <div class="cart-total" id="mycalculate" oninput="banana()" onclick="banana()">
+                    <!-- <div class="cart-total" onchange="banana()" onclick="banana()">
+                        <strong class="cart-total-title">總價</strong>
+                        <span class="cart-total-price">NT$0</span>
+                    </div> -->
+                    <div class="cart-total" id="mycalculate" onclick="banana()">
                         <strong class="cart-total-title">總價</strong>
                         <span class="cart-total-price">NT$0</span>
                     </div>
@@ -110,6 +114,7 @@
         </div>
         <!-- 購物車外菜單結束 -->
     </header>
+    <div onclick="banana()">
     <div class="container" onclick="apple()">
         <br id="popular"><br><br>
         <section class="content-section">
@@ -535,7 +540,7 @@
             </div>
         </section>
     </div>
-
+    </div>
 
 
     <footer>
@@ -562,11 +567,11 @@
         }; 
         //送出計算結果至localStorage
         function banana() {
-            console.clear();
-            console.log('banana stare')
+            // console.clear();
+            // console.log('banana stare')
             const myHtmlSnippet = document.getElementById('mycalculate').innerHTML;
             localStorage.setItem('mycalculate', myHtmlSnippet)
-            console.log('banana end');
+            // console.log('banana end');
         }
     </script>
 </body>

@@ -128,18 +128,26 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeb()">&times;</a>
 
             <!-- 購物車總站 -->
-            <div class="right-cm">
-                <section class="content-section">
+            <div class="right-cm" onclick="banana()">
+                <section class="content-section" oninput="apple()" onclick="apple()">
                     <h2>購物車</h2>
-                    <div class="cart-row">
-                        <span class="cart-item cart-header cart-column">商品</span>
-                        <span class="cart-price cart-header cart-column">價格</span>
-                        <span class="cart-quantity cart-header cart-column">數量</span>
-                    </div>
-                    <div class="cart-items" id="mySnippet" oninput="apple()">
-                    </div>
-                    <div class="cart-total" id="mycalculate" oninput="banana()">
-
+                    <div>
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">商品</span>
+                            <span class="cart-price cart-header cart-column">價格</span>
+                            <span class="cart-quantity cart-header cart-column">數量</span>
+                        </div>
+                        <div class="cart-items" id="mySnippet" onchange="banana()" onclick="banana()">
+    
+                        </div>
+                        <!-- <div class="cart-total" onchange="banana()" onclick="banana()">
+                            <strong class="cart-total-title">總價</strong>
+                            <span class="cart-total-price">NT$0</span>
+                        </div> -->
+                        <div class="cart-total" id="mycalculate">
+                            <strong class="cart-total-title">總價</strong>
+                            <span class="cart-total-price">NT$0</span>
+                        </div>
                     </div>
                     <!-- <div class="cart-total">
                         <strong class="cart-total-title">總價</strong>

@@ -136,9 +136,9 @@
                         <span class="cart-price cart-header cart-column">價格</span>
                         <span class="cart-quantity cart-header cart-column">數量</span>
                     </div>
-                    <div class="cart-items" id="targetElement">
+                    <div class="cart-items" id="mySnippet" oninput="apple()">
                     </div>
-                    <div class="cart-total" id="mycalculate">
+                    <div class="cart-total" id="mycalculate" oninput="banana()">
 
                     </div>
                     <!-- <div class="cart-total">
@@ -251,10 +251,23 @@
             alert('感謝您的建議！');
         });
 
+         //接收localStorage的品項
         const retrievedHtml = localStorage.getItem('myHtml');
-        document.getElementById('targetElement').innerHTML = retrievedHtml;
+        document.getElementById('mySnippet').innerHTML = retrievedHtml;
+        //接收localStorage的計算結果
         const Html = localStorage.getItem('mycalculate');
         document.getElementById('mycalculate').innerHTML = Html;
+        // 送出品項至localStorage
+        function apple() {
+            const myHtmlSnippet = document.getElementById('mySnippet').innerHTML;
+            localStorage.setItem('myHtml', myHtmlSnippet)
+        }; 
+        console.log(document.getElementById('mySnippet').innerHTML);
+        //送出計算結果至localStorage
+        function banana() {
+            const myHtmlSnippet = document.getElementById('mycalculate').innerHTML;
+            localStorage.setItem('mycalculate', myHtmlSnippet)
+        }
 
     </script>
 </body>

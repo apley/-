@@ -95,10 +95,10 @@
                         <span class="cart-price cart-header cart-column">價格</span>
                         <span class="cart-quantity cart-header cart-column">數量</span>
                     </div>
-                    <div class="cart-items" id="targetElement">
+                    <div class="cart-items" id="mySnippet" onchange="apple()">
 
                     </div>
-                    <div class="cart-total" id="mycalculate">
+                    <div class="cart-total" id="mycalculate" onchange="banana()">
 
                     </div>
                     <!-- <div class="cart-total">
@@ -228,25 +228,25 @@
     <h2 class="container" style="font-size: 40px; border-bottom: 1px solid black;padding: 50px;">產品介紹</h2>
     <div class="container b2-img ">
         <div style="float: right ;display: flexbox;">
-            <img src="https://placehold.co/600x400 " class="pointer" alt="" width="400px">
+            <img src="../img/圓糕口味-500px.webp" class="pointer" alt="" width="400px">
             <p class="margin50">
                 圓形糕｜綠豆/芝麻/杏仁/梅香/牛奶/抹茶延續百<br>年的傳統糕點綿密口感、入口即化，為茗茶最合宜<br>之甜點，受到各年齡層的喜愛與推薦。口味多樣，<br>歡迎選購。
             </p>
         </div>
         <div style="float: right;display: flexbox;">
-            <img src="https://placehold.co/600x400 " class="pointer" alt="" width="400px">
-            <p class="margin50" >鳳眼糕｜原味/杏仁/梅香/黑糖
+            <img src="../img/鳳眼糕-500px.webp " class="pointer" alt="" width="400px">
+            <p class="margin50">鳳眼糕｜原味/杏仁/梅香/黑糖
                 昔日鹿港文人雅士<br>聚會時以詩詞與糕點佐茶，創辦人黃錦先生準備各<br>式糕點招待書齋的賓客，鳳眼糕便是其中之一。精<br>緻細長的外型宛如鳳眼，口感沁涼清甜、入口即化<br>，獲得眾人喜愛。
             </p>
         </div>
         <div style="float: right;display: flexbox;">
-            <img src="https://placehold.co/600x400 " class="pointer" alt="" width="400px">
+            <img src="../img/綜合鳳梨酥.png.webp " class="pointer" alt="" width="400px">
             <p class="margin50">綜合鳳梨酥禮盒
                 適合拜訪親友、過節團聚時享用<br>，為伴手禮首選。送禮自食兩相宜，歡迎選購。 <br>鳳梨酥內餡的甜香味來自於古早工法，讓鳳梨甜味<br>溫和。外皮酥脆則是來自於傳統麵餅打工功夫。
                 玉<br>珍齋堅持數十年，只為給您最傳統的美味鳳梨酥。</p>
         </div>
         <div style="float: right;display: flexbox;">
-            <img src="https://placehold.co/600x400 " class="pointer" alt="" width="400px">
+            <img src="../img/綜合鳳梨酥.png.webp" class="pointer" alt="" width="400px">
             <p class="margin50">
                 圓形糕｜綠豆/芝麻/杏仁/梅香/牛奶/抹茶延續百<br>年的傳統糕點綿密口感、入口即化，為茗茶最合宜<br>之甜點，受到各年齡層的喜愛與推薦。口味多樣，<br>歡迎選購。
             </p>
@@ -267,10 +267,23 @@
     <script src="./js.js"> </script>
     <script src="../商品/store.js"></script>
     <script>
+        //接收localStorage的品項
         const retrievedHtml = localStorage.getItem('myHtml');
-        document.getElementById('targetElement').innerHTML = retrievedHtml;
+        document.getElementById('mySnippet').innerHTML = retrievedHtml;
+        //接收localStorage的計算結果
         const Html = localStorage.getItem('mycalculate');
         document.getElementById('mycalculate').innerHTML = Html;
+        // 送出品項至localStorage
+        function apple() {
+            const myHtmlSnippet = document.getElementById('mySnippet').innerHTML;
+            localStorage.setItem('myHtml', myHtmlSnippet)
+        }; 
+        console.log(document.getElementById('mySnippet').innerHTML);
+        //送出計算結果至localStorage
+        function banana() {
+            const myHtmlSnippet = document.getElementById('mycalculate').innerHTML;
+            localStorage.setItem('mycalculate', myHtmlSnippet)
+        }
     </script>
 
 </body>

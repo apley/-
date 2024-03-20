@@ -75,8 +75,7 @@
         </div>
         <!-- 購物車外菜單 -->
         <div id="sale" class="sidenav-right">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeb()">&times;</a>
-
+            <a href="javascript:void(0)" class="closebtn" on onclick="closeb()">&times;</a>
             <!-- 購物車總站 -->
             <div class="right-cm">
                 <section class="content-section">
@@ -87,9 +86,10 @@
                         <span class="cart-price cart-header cart-column">價格</span>
                         <span class="cart-quantity cart-header cart-column">數量</span>
                     </div>
-                    <div class="cart-items" id="mySnippet">
+                    <div class="cart-items" id="mySnippet" oninput="apple()" onclick="apple()">
+
                     </div>
-                    <div class="cart-total" id="mycalculate">
+                    <div class="cart-total" id="mycalculate" oninput="banana()" onclick="banana()">
                         <strong class="cart-total-title">總價</strong>
                         <span class="cart-total-price">NT$0</span>
                     </div>
@@ -110,7 +110,7 @@
         </div>
         <!-- 購物車外菜單結束 -->
     </header>
-    <div class="container">
+    <div class="container" onclick="apple()">
         <br id="popular"><br><br>
         <section class="content-section">
             <h2 class="section-header">產品列表</h2>
@@ -431,6 +431,108 @@
                     </div>
                 </div>
             </div>
+            <h3>糕點系列</h3>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">圓形糕｜綠豆/芝麻<br>/杏仁/梅香/牛奶/抹茶</span>
+                    <img class="shop-item-image" src="../img/圓糕口味-500px (1).webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$90</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">鳳眼糕｜原味<br>/梅香/黑糖</span>
+                    <img class="shop-item-image" src="../img/鳳眼糕-500px (1).webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$50</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">口酥餅｜原味/杏仁</span>
+                    <img class="shop-item-image" src="../img/口酥餅.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$90</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">糕禮盒</span>
+                    <img class="shop-item-image" src="../img/糕禮盒.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$280</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">八君子禮盒</span>
+                    <img class="shop-item-image" src="../img/八君子禮盒.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$640</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+            </div>
+            <h3>糕點系列</h3>
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">圓形糕｜綠豆/芝麻<br>/杏仁/梅香/牛奶/抹茶</span>
+                    <img class="shop-item-image" src="../img/圓糕口味-500px (1).webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$90</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">鳳眼糕｜原味<br>/梅香/黑糖</span>
+                    <img class="shop-item-image" src="../img/鳳眼糕-500px (1).webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$50</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">口酥餅｜原味/杏仁</span>
+                    <img class="shop-item-image" src="../img/口酥餅.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$90</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">糕禮盒</span>
+                    <img class="shop-item-image" src="../img/糕禮盒.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$760</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">【2024春節】如意禮盒B</span>
+                    <img class="shop-item-image" src="../img/2024過年-事事如意B（含蓋）.png.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$280</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">八君子禮盒</span>
+                    <img class="shop-item-image" src="../img/八君子禮盒.webp">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">NT$640</span>
+                        <button class="btn btn-primary shop-item-button" type="button">加入購物車</button>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -442,14 +544,30 @@
         </div>
     </footer>
     <script>
-        var intervalId = setInterval(function () {
+       
+        //接收localStorage的品項
+        const retrievedHtml = localStorage.getItem('myHtml');
+        document.getElementById('mySnippet').innerHTML = retrievedHtml;
+        //接收localStorage的計算結果
+        const Html = localStorage.getItem('mycalculate');
+        document.getElementById('mycalculate').innerHTML = Html;
+        // 送出品項至localStorage
+        function apple() {
+            // console.clear();
+            // console.log('apple stare')
             const myHtmlSnippet = document.getElementById('mySnippet').innerHTML;
             localStorage.setItem('myHtml', myHtmlSnippet)
-        }, 100);
-        var intervalId = setInterval(function () {
+            // console.log(myHtmlSnippet);
+            // console.log('apple end');
+        }; 
+        //送出計算結果至localStorage
+        function banana() {
+            console.clear();
+            console.log('banana stare')
             const myHtmlSnippet = document.getElementById('mycalculate').innerHTML;
             localStorage.setItem('mycalculate', myHtmlSnippet)
-        }, 100);
+            console.log('banana end');
+        }
     </script>
 </body>
 

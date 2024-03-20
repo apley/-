@@ -15,6 +15,7 @@ function ready() {
     for (var i = 0; i < quantityInputs.length; i++) {
         var input = quantityInputs[i]
         input.addEventListener('change', quantityChanged)
+
     }
 
     var addToCartButtons = document.getElementsByClassName('shop-item-button')
@@ -41,27 +42,41 @@ function removeCartItem(event) {
     buttonClicked.parentElement.parentElement.remove()
     updateCartTotal()
 }
-
+function updatequantity(){
+        document.getElementsByClassName('cart-quantity-input').value=input.innerHTML
+        console.log(input);
+    }
 function quantityChanged(event) {
-    var input = event.target
+    console.clear()
+    console.log('quantityChanged開始')
+    const input = event.target
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1
+    }else{
+        input.innerHTML=input.value
+        console.log(input)
     }
+      
     updateCartTotal()
+    console.log('quantitychanger結束')
 }
-
+    
 function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    //這裡是加入購物車  不應該拿來改數量 應該在quantitychanged更改
+    // var quantity=shopItem.getElementsByClassName('cart-quantity-input')[0].innerText
     addItemToCart(title, price, imageSrc)
     updateCartTotal();
 }
 
 
 function addItemToCart(title, price, imageSrc) {
+
+    // console.log();
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -79,7 +94,7 @@ function addItemToCart(title, price, imageSrc) {
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="1">
+            <input class="cart-quantity-input" type="number" value='1'>
             <button class="btn btn-danger" type="button">刪除</button>
         </div>`
     cartRow.innerHTML = cartRowContents
@@ -101,9 +116,6 @@ function updateCartTotal() {
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
-    if (total <= 5000)
-        total = Math.round(total * 100) / 100
-    else total = Math.round(total * 90) / 100
 
     document.getElementsByClassName('cart-total-price')[0].innerText = 'NT$' + total
 }
